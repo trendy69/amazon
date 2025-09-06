@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Landing — Example</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./redirect.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Brand<span>X</span></a>
+      <nav class="nav" id="main-nav">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="btn primary">Get Started</button>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Build fast, modern web apps</h1>
+          <p>Fast setup, routing, and optimised performance for your next project. Lightweight starter landing — customise as you need.</p>
+          <div class="hero-ctas">
+            <a id="open-messenger" class="btn primary" href="https://m.me/731057120097879" target="_blank" rel="noopener">
+        Chat on Messenger
+      </a>
+            <a class="btn ghost" href="#contact">Contact Sales</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <div class="mock-card">Your app preview</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <article class="feature">
+          <h3>Fast Routing</h3>
+          <p>File-system based routing and incremental builds make development fast.</p>
+        </article>
+        <article class="feature">
+          <h3>Optimised</h3>
+          <p>Automatic code-splitting and optimised bundles keep load times low.</p>
+        </article>
+        <article class="feature">
+          <h3>Scalable</h3>
+          <p>Scale from prototypes to production with a simple deployment story.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About</h2>
+      <p>Use this starter to create a polished landing page. Replace copy, images and styles to match your brand.</p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="How can we help?" rows="4"></textarea>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BrandX. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
