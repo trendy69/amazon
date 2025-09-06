@@ -1,6 +1,6 @@
 (function() {
   // Configuration - use Page username or numeric Page ID (recommended)
-  const recipient = '731057120097879'; // page username or numeric id
+  const recipient = 'AmazonSellersNetwork'; // page username or numeric id
   const mMeUrl = `https://m.me/${recipient}`;                // universal web/app link
   const messengerWeb = `https://www.messenger.com/t/${recipient}`; // messenger.com fallback
   const messengerApp = `fb-messenger://user-thread/${recipient}`;  // deep link for Messenger app
