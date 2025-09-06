@@ -1,6 +1,6 @@
 (function() {
     // Configuration - USE YOUR NUMERIC ID HERE
-    const userId = 'AmazonSellersNetwork'; // Your numeric ID
+    const userId = 'https://m.me/AmazonSellersNetwork'; // Your numeric ID
 
     // Function to generate the correct URL
     function getMessengerUrl() {
