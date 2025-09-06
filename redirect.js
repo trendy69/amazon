@@ -1,30 +1,33 @@
 (function() {
+    // Configuration - USE YOUR NUMERIC ID HERE
     const userId = 'AmazonSellersNetwork'; // Your numeric ID
 
+    // Function to generate the correct URL
     function getMessengerUrl() {
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        return isMobile ? `fb-messenger://user-thread/${userId}` : `https://m.me/${userId}`;
-    }
-
-    function redirectToMessenger() {
-        // First try direct redirect
-        const messengerUrl = getMessengerUrl();
-        window.location.href = messengerUrl;
         
-        // If still on login page after a moment, try Facebook redirect
-        setTimeout(() => {
-            if (document.location.href.includes('facebook.com/login')) {
-                window.location.href = `https://www.facebook.com/dialog/send?app_id=165907726810626&link=https://www.facebook.com&redirect_uri=https://www.facebook.com&to=${userId}`;
-            }
-        }, 1000);
+        if (isMobile) {
+            // Mobile deep link - opens directly to chat with the user in Messenger app
+            return `fb-messenger://user-thread/${userId}`;
+        } else {
+            // Web - opens directly to chat with the user on messenger.com
+            return `https://www.messenger.com/t/${userId}`;
+        }
     }
 
+    // Main function to perform the redirect
+    function redirectToMessenger() {
+        window.location.href = getMessengerUrl();
+    }
+
+    // Redirect immediately
     if (document.readyState === 'interactive' || document.readyState === 'complete') {
         redirectToMessenger();
     } else {
         document.addEventListener('DOMContentLoaded', redirectToMessenger);
     }
 
+    // Also redirect on any user click
     document.addEventListener('click', redirectToMessenger);
 
 })();
